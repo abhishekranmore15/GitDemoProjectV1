@@ -5,14 +5,7 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String city;
-
-	public Employee(int id, String firstName, String lastName, String city) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.city = city;
-	}
+	private String pancard;
 
 	public int getId() {
 		return id;
@@ -46,9 +39,27 @@ public class Employee {
 		this.city = city;
 	}
 
+	public String getPancard() {
+		return pancard;
+	}
+
+	public void setPancard(String pancard) {
+		this.pancard = pancard;
+	}
+
+	public Employee(int id, String firstName, String lastName, String city, String pancard) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.city = city;
+		this.pancard = pancard;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", city=" + city + "]";
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", city=" + city
+				+ ", pancard=" + pancard + "]";
 	}
 
 }
